@@ -28401,6 +28401,70 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 6343214863177333631, guid: e96ffa1cc9a1b00459c5a1934c3d4aa6, type: 3}
+--- !u!1 &1101706045
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1101706047}
+  - component: {fileID: 1101706046}
+  m_Layer: 0
+  m_Name: CharacterSwitcher
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1101706046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101706045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54a3372b5c53a9044a2873f61d37d638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  player: {fileID: 145989357}
+  eagle: {fileID: 1404036045}
+  cameraManager: {fileID: 1997209850}
+  cameraPivot: {fileID: 713773321}
+  mainCamera: {fileID: 1058110381}
+  eagleCameraFollowSpeed: 10
+  eagleCameraLookSpeed: 2
+  eagleCameraPivotSpeed: 2
+  cameraDistance: 1
+  cameraHeight: 2
+  minPivotAngle: -30
+  maxPivotAngle: 60
+  turnSpeed: 50
+  pitchSpeed: 30
+  maxPitchAngle: 60
+  bankAngle: 35
+  bankSpeed: 4
+  baseFlightSpeed: 20
+  boostMultiplier: 1.8
+  controllingEagle: 0
+--- !u!4 &1101706047
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101706045}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 660.1917, y: 19.95333, z: 473.0803}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1107154585 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6064153176478479626, guid: 9b80b015d59e59441a2aa14c2a389e5c, type: 3}
@@ -39215,6 +39279,18 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 5580182036786632085, guid: 15d2af2f41f6c964983ee9b74a10762b, type: 3}
+      propertyPath: characterCamera
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5580182036786632085, guid: 15d2af2f41f6c964983ee9b74a10762b, type: 3}
+      propertyPath: springArmTransform
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5580182036786632085, guid: 15d2af2f41f6c964983ee9b74a10762b, type: 3}
+      propertyPath: speedLineParticleRenderer
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6143750038957649800, guid: 15d2af2f41f6c964983ee9b74a10762b, type: 3}
       propertyPath: m_Layer
       value: 9
@@ -39258,6 +39334,14 @@ PrefabInstance:
     - target: {fileID: 7528619514769770259, guid: 15d2af2f41f6c964983ee9b74a10762b, type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8214081018595497250, guid: 15d2af2f41f6c964983ee9b74a10762b, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8214081018595497252, guid: 15d2af2f41f6c964983ee9b74a10762b, type: 3}
+      propertyPath: cameraTransform
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8214081018595497253, guid: 15d2af2f41f6c964983ee9b74a10762b, type: 3}
       propertyPath: m_LocalScale.x
@@ -39339,9 +39423,7 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8214081018595497252, guid: 15d2af2f41f6c964983ee9b74a10762b, type: 3}
-    - {fileID: 5580182036786632085, guid: 15d2af2f41f6c964983ee9b74a10762b, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 8214081019682576376, guid: 15d2af2f41f6c964983ee9b74a10762b, type: 3}
     - {fileID: 6983950810032634329, guid: 15d2af2f41f6c964983ee9b74a10762b, type: 3}
@@ -50901,3 +50983,4 @@ SceneRoots:
   - {fileID: 1824873080}
   - {fileID: 217835051}
   - {fileID: 1585244955}
+  - {fileID: 1101706047}
