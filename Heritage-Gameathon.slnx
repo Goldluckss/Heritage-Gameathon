@@ -1,6 +1,4 @@
 ﻿<Solution>
   <Project Path="Assembly-CSharp.csproj" />
-  <Project Path="Arikan.MiniMap.csproj" />
   <Project Path="Assembly-CSharp-Editor.csproj" />
-  <Project Path="Arikan.MiniMap.Demo.csproj" />
 </Solution>
