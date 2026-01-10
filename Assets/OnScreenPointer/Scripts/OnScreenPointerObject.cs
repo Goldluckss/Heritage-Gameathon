@@ -65,17 +65,25 @@ namespace OnScreenPointerPlugin
 
         private void OnDisable()
         {
-            uiImage?.gameObject?.SetActive(false);
+            if (uiImage != null && uiImage.gameObject != null)
+            {
+                uiImage.gameObject.SetActive(false);
+            }
         }
 
         private void OnDestroy()
         {
-            if(uiImage?.gameObject)
-             Destroy(uiImage.gameObject);
+            if (uiImage != null && uiImage.gameObject != null)
+            {
+                Destroy(uiImage.gameObject);
+            }
         }
         // Update is called once per frame
         void Update()
         {
+            if (uiImage == null || uiImage.gameObject == null)
+                return;
+
             var screenPos = MyScreenPosition(transform);
 
             isPointerInScreen = IsPointerInScreen(screenPos);
