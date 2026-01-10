@@ -54,7 +54,6 @@ public class PlayerLocomotion : MonoBehaviour
             }
         }
 
-        // Preserve Y velocity (gravity) while applying horizontal movement
         Vector3 currentVelocity = playerRigidbody.linearVelocity;
         Vector3 movementVelocity = new Vector3(moveDirection.x, currentVelocity.y, moveDirection.z);
         playerRigidbody.linearVelocity = movementVelocity;
