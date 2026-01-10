@@ -14,6 +14,7 @@ public class CameraManager : MonoBehaviour
     private float defaultPosition;
     private Vector3 cameraFollowVelocity = Vector3.zero;
     private Vector3 cameraVectorPosition;
+    private float cameraZVelocity = 0f; // For smoothing camera Z position
 
     public float cameraCollisionOffSet = 0.2f;
     public float minimumCollisionOffSet = 0.2f; // Minimum distance camera can be from pivot (in local Z)
@@ -112,26 +113,42 @@ public class CameraManager : MonoBehaviour
         Vector3 direction = -cameraPivot.forward; // Backward direction (towards where camera should be)
         float maxDistance = Mathf.Abs(defaultPosition); // Maximum distance to cast (e.g., 3)
         
-        // Debug: Draw ray in scene view
-        Debug.DrawRay(cameraPivot.position, direction * maxDistance, Color.red);
+        // Start the cast forward from the pivot to avoid hitting the player character
+        // This prevents glitches when walking backwards - use a larger offset
+        float forwardOffset = cameraCollisionRadius * 1.5f; // Increased offset
+        Vector3 castOrigin = cameraPivot.position + cameraPivot.forward * forwardOffset;
         
-        // Cast from camera pivot towards the desired camera position (backward)
-        if (Physics.SphereCast(cameraPivot.position, cameraCollisionRadius, direction, out hit, maxDistance, collisionLayers))
+        // Debug: Draw ray in scene view
+        Debug.DrawRay(castOrigin, direction * maxDistance, Color.red);
+        
+        // Cast from slightly forward of camera pivot towards the desired camera position (backward)
+        if (Physics.SphereCast(castOrigin, cameraCollisionRadius, direction, out hit, maxDistance, collisionLayers))
         {
-            // hit.distance = distance from pivot to where sphere center hits the wall
-            // To get the safe camera position, we need:
-            // - Subtract sphere radius to get distance to wall surface
-            // - Subtract offset to keep camera away from wall
-            // This gives us how far the camera can be from the pivot
-            float distanceToWall = hit.distance - cameraCollisionRadius;
-            float safeCameraDistance = distanceToWall - cameraCollisionOffSet;
-            
-            // Clamp to ensure camera doesn't get too close to pivot
-            // safeCameraDistance should be between minimumCollisionOffSet and maxDistance
-            safeCameraDistance = Mathf.Clamp(safeCameraDistance, minimumCollisionOffSet, maxDistance);
-            
-            // Camera position is negative (behind pivot in local space)
-            targetPosition = -safeCameraDistance;
+            // Ignore hits on the player character to prevent glitches when walking backwards
+            if (hit.collider != null && hit.collider.transform == targetTransform)
+            {
+                // Hit the player, ignore it and use default position
+                targetPosition = defaultPosition;
+            }
+            else
+            {
+                // hit.distance = distance from cast origin to where sphere center hits the wall
+                // Account for the forward offset we added to get distance from pivot
+                float distanceFromPivot = hit.distance + forwardOffset;
+                
+                // To get the safe camera position:
+                // - Subtract sphere radius to get distance to wall surface
+                // - Subtract offset to keep camera away from wall
+                float distanceToWall = distanceFromPivot - cameraCollisionRadius;
+                float safeCameraDistance = distanceToWall - cameraCollisionOffSet;
+                
+                // Clamp to ensure camera doesn't get too close to pivot
+                // safeCameraDistance should be between minimumCollisionOffSet and maxDistance
+                safeCameraDistance = Mathf.Clamp(safeCameraDistance, minimumCollisionOffSet, maxDistance);
+                
+                // Camera position is negative (behind pivot in local space)
+                targetPosition = -safeCameraDistance;
+            }
         }
 
         // Check if camera is a child of pivot (use local position) or not (use world position)
@@ -143,23 +160,8 @@ public class CameraManager : MonoBehaviour
             float originalX = localPos.x;
             float originalY = localPos.y;
             
-            float newZ = Mathf.Lerp(localPos.z, targetPosition, 0.5f);
-            
-            // Calculate the desired world position to check for collisions
-            Vector3 desiredLocalPos = new Vector3(originalX, originalY, newZ);
-            Vector3 desiredWorldPos = cameraPivot.TransformPoint(desiredLocalPos);
-            
-            // Additional check: Cast from pivot to desired camera position to ensure no wall in between
-            Vector3 toDesiredCamera = desiredWorldPos - cameraPivot.position;
-            float distanceToDesired = toDesiredCamera.magnitude;
-            
-            if (Physics.Raycast(cameraPivot.position, toDesiredCamera.normalized, out hit, distanceToDesired, collisionLayers))
-            {
-                // If there's a wall between pivot and desired position, adjust
-                float adjustedDistance = hit.distance - cameraCollisionOffSet;
-                adjustedDistance = Mathf.Max(adjustedDistance, minimumCollisionOffSet);
-                newZ = -adjustedDistance;
-            }
+            // Use SmoothDamp for smoother camera movement to prevent glitches
+            float newZ = Mathf.SmoothDamp(localPos.z, targetPosition, ref cameraZVelocity, 0.1f);
             
             // Set position preserving X and Y, only changing Z
             cameraTransform.localPosition = new Vector3(originalX, originalY, newZ);
