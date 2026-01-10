@@ -17,6 +17,12 @@ public class AnimatorManager : MonoBehaviour
 
     public void UpdateAnimatorValues(float horizontalMovement, float verticalMovement)
     {
+        // Check if animator exists and has a controller assigned
+        if (animator == null || animator.runtimeAnimatorController == null)
+        {
+            return;
+        }
+
         //Animation Snapping
         float snappedHorizontal;
         float snappedVertical;
