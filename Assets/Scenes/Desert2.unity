@@ -28435,11 +28435,11 @@ MonoBehaviour:
   cameraManager: {fileID: 1997209850}
   cameraPivot: {fileID: 713773321}
   mainCamera: {fileID: 1058110381}
-  eagleCameraFollowSpeed: 10
-  eagleCameraLookSpeed: 2
-  eagleCameraPivotSpeed: 2
+  eagleCameraFollowSpeed: 6
+  eagleCameraLookSpeed: 100
+  eagleCameraPivotSpeed: 80
   cameraDistance: 1
-  cameraHeight: 2
+  cameraHeight: 0.5
   minPivotAngle: -30
   maxPivotAngle: 60
   turnSpeed: 50
@@ -28447,9 +28447,12 @@ MonoBehaviour:
   maxPitchAngle: 60
   bankAngle: 35
   bankSpeed: 4
-  baseFlightSpeed: 20
-  boostMultiplier: 1.8
+  baseFlightSpeed: 5
+  boostMultiplier: 2.5
+  returnSpeed: 15
+  returnRotationSpeed: 5
   controllingEagle: 0
+  eagleReturning: 0
 --- !u!4 &1101706047
 Transform:
   m_ObjectHideFlags: 0

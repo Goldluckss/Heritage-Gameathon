@@ -142,7 +142,6 @@ public class CharacterSwitcher : MonoBehaviour
         if (controllingEagle)
         {
             ReadEagleInput();
-            HandleCameraOrbitInput();
         }
 
         if (eagleReturning)
@@ -377,15 +376,6 @@ public class CharacterSwitcher : MonoBehaviour
         }
     }
 
-    void HandleCameraOrbitInput()
-    {
-        cameraOrbitYaw += eagleCameraInput.x * eagleCameraLookSpeed * Time.deltaTime;
-        cameraOrbitPitch -= eagleCameraInput.y * eagleCameraPivotSpeed * Time.deltaTime;
-        cameraOrbitPitch = Mathf.Clamp(cameraOrbitPitch, minPivotAngle, maxPivotAngle);
-
-        if (cameraOrbitYaw > 360f) cameraOrbitYaw -= 360f;
-        if (cameraOrbitYaw < -360f) cameraOrbitYaw += 360f;
-    }
 
     void HandleEagleMovement()
     {
