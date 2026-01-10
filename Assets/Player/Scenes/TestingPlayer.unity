@@ -921,11 +921,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FinalVersionV2
       objectReference: {fileID: 0}
-    - target: {fileID: 6371356905229068624, guid: 31345b85e8eb2704fa3eade147a62a98, type: 3}
+    - target: {fileID: 5866666021909216657, guid: fce7d00cbca170142b465afa709955fa, type: 3}
       propertyPath: m_Avatar
       value: 
       objectReference: {fileID: 9000000, guid: fce7d00cbca170142b465afa709955fa, type: 3}
-    - target: {fileID: 6371356905229068624, guid: 31345b85e8eb2704fa3eade147a62a98, type: 3}
+    - target: {fileID: 5866666021909216657, guid: fce7d00cbca170142b465afa709955fa, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 1df80cc79c2927143aea21ea5d8db401, type: 2}
