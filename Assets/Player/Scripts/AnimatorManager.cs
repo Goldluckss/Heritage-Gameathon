@@ -15,15 +15,20 @@ public class AnimatorManager : MonoBehaviour
         vertical = Animator.StringToHash("Vertical");
     }
 
-    public void UpdateAnimatorValues(float horizontalMovement, float verticalMovement)
+    public void PlayTargetAnimation(string targetAnimation, bool isInteracting)
     {
-        // Check if animator exists and has a controller assigned
+        animator.SetBool("isInteracting", isInteracting);
+        animator.CrossFade(targetAnimation, 0.2f);
+
+    }
+
+    public void UpdateAnimatorValues(float horizontalMovement, float verticalMovement, bool isSprinting)
+    {
         if (animator == null || animator.runtimeAnimatorController == null)
         {
             return;
         }
 
-        //Animation Snapping
         float snappedHorizontal;
         float snappedVertical;
 
@@ -72,7 +77,15 @@ public class AnimatorManager : MonoBehaviour
         }
         #endregion
 
-        animator.SetFloat(horizontal, snappedHorizontal, 0.1f, Time.deltaTime);
-        animator.SetFloat(vertical, snappedVertical, 0.1f, Time.deltaTime);
+        if (isSprinting)
+        {
+            snappedHorizontal = horizontalMovement;
+            snappedVertical = 2;
+        }
+
+        float dampingTime = isSprinting ? 0f : 0.1f;
+        
+        animator.SetFloat(horizontal, snappedHorizontal, dampingTime, Time.deltaTime);
+        animator.SetFloat(vertical, snappedVertical, dampingTime, Time.deltaTime);
     }
 }

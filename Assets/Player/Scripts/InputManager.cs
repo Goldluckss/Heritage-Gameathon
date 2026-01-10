@@ -38,7 +38,6 @@ public class InputManager : MonoBehaviour
 		playerActions.Enable();
 		playerActionsActions.Enable();
 
-		// Register Sprint callbacks
 		playerActionsActions.Sprint.performed += OnSprintPerformed;
 		playerActionsActions.Sprint.canceled += OnSprintCanceled;
     }
@@ -64,7 +63,6 @@ public class InputManager : MonoBehaviour
 		playerActions.Disable();
 		playerActionsActions.Disable();
 
-		// Unregister Sprint callbacks
 		playerActionsActions.Sprint.performed -= OnSprintPerformed;
 		playerActionsActions.Sprint.canceled -= OnSprintCanceled;
 	}
@@ -78,8 +76,6 @@ public class InputManager : MonoBehaviour
 	{
 		HandleMovementInput();
 		HandleSprintingInput();
-        //HandleJumpingInput
-        //HandleActionInput
     }
 
     private void HandleMovementInput()
@@ -91,7 +87,6 @@ public class InputManager : MonoBehaviour
 		cameraInputY = cameraInput.y;
 
         moveAmount = Mathf.Clamp01(Mathf.Abs(horizontalInput) + Mathf.Abs(verticalInput));
-        animatorManager.UpdateAnimatorValues(0, moveAmount);
     }
 
 	private void HandleSprintingInput()
@@ -104,5 +99,7 @@ public class InputManager : MonoBehaviour
 		{
 			playerLocomotion.isSprinting = false;
         }
+        
+        animatorManager.UpdateAnimatorValues(horizontalInput, verticalInput, playerLocomotion.isSprinting);
     }
 }
