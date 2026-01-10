@@ -1,3 +1,5 @@
 ﻿<Solution>
   <Project Path="Assembly-CSharp.csproj" />
+  <Project Path="Arikan.MiniMap.csproj" />
+  <Project Path="Arikan.MiniMap.Demo.csproj" />
 </Solution>
