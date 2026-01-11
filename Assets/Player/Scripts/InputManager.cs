@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using HeneGames.DialogueSystem; // Required for DialogueManager access
 
 public class InputManager : MonoBehaviour
 {
@@ -65,6 +66,15 @@ public class InputManager : MonoBehaviour
 
     private void Update()
     {
+        // Don't read input during dialogue
+        if (DialogueManager.IsDialogueActive)
+        {
+            // Zero out all inputs during dialogue
+            movementInput = Vector2.zero;
+            cameraInput = Vector2.zero;
+            return;
+        }
+
         movementInput = playerActions.Movement.ReadValue<Vector2>();
         cameraInput = playerActions.Camera.ReadValue<Vector2>();
     }
@@ -85,6 +95,24 @@ public class InputManager : MonoBehaviour
 
     public void HandleALLInput()
     {
+        // Block all input handling during dialogue
+        if (DialogueManager.IsDialogueActive)
+        {
+            // Reset movement values to stop the player
+            verticalInput = 0f;
+            horizontalInput = 0f;
+            moveAmount = 0f;
+            cameraInputX = 0f;
+            cameraInputY = 0f;
+            shiftInput = false;
+            jumpInput = false;
+            
+            // Update animator to idle state
+            playerLocomotion.isSprinting = false;
+            animatorManager.UpdateAnimatorValues(0f, 0f, false, playerManager.isGrounded);
+            return;
+        }
+
         HandleMovementInput();
         HandleSprintingInput();
         HandleJumpingInput();
