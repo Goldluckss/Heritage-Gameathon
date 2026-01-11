@@ -139,7 +139,7 @@ AnimatorController:
     m_Behaviours: []
     m_BlendingMode: 0
     m_SyncedLayerIndex: -1
-    m_DefaultWeight: 0
+    m_DefaultWeight: 1
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
@@ -209,6 +209,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 458996676a98c034492a19516e60bec1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  isInteractingBool: isInteracting
+  isInteractingStatus: 0
 --- !u!1107 &3656208937430816479
 AnimatorStateMachine:
   serializedVersion: 6
