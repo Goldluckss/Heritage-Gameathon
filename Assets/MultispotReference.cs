@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using OnScreenPointerPlugin;
 
 /// <summary>
 /// A special checkpoint with multiple spots where only one is correct.
@@ -33,6 +34,9 @@ public class MultiSpotCheckpoint : MonoBehaviour
                 spot.parentCheckpoint = this;
             }
         }
+
+        // Make sure all spots and their pointers are disabled at start
+        DeactivateAllSpots();
     }
 
     /// <summary>
@@ -44,13 +48,20 @@ public class MultiSpotCheckpoint : MonoBehaviour
         isActive = true;
         gameObject.SetActive(true);
 
-        // Activate all spots
+        // Activate all spots and their pointers
         foreach (var spot in spots)
         {
             if (spot != null)
             {
                 spot.gameObject.SetActive(true);
                 spot.ResetSpot();
+
+                // Enable the pointer if it exists
+                var pointer = spot.GetComponent<OnScreenPointerObject>();
+                if (pointer != null)
+                {
+                    pointer.enabled = true;
+                }
             }
         }
 
@@ -64,18 +75,30 @@ public class MultiSpotCheckpoint : MonoBehaviour
     public void Deactivate()
     {
         isActive = false;
+        DeactivateAllSpots();
+        gameObject.SetActive(false);
+        Debug.Log("[MultiSpotCheckpoint] Deactivated");
+    }
 
-        // Deactivate all spots
+    /// <summary>
+    /// Deactivates all spots and their pointers.
+    /// </summary>
+    private void DeactivateAllSpots()
+    {
         foreach (var spot in spots)
         {
             if (spot != null)
             {
+                // Disable the pointer first
+                var pointer = spot.GetComponent<OnScreenPointerObject>();
+                if (pointer != null)
+                {
+                    pointer.enabled = false;
+                }
+
                 spot.gameObject.SetActive(false);
             }
         }
-
-        gameObject.SetActive(false);
-        Debug.Log("[MultiSpotCheckpoint] Deactivated");
     }
 
     /// <summary>
@@ -90,14 +113,8 @@ public class MultiSpotCheckpoint : MonoBehaviour
             Debug.Log("[MultiSpotCheckpoint] Correct spot reached!");
             onCorrectSpotReached?.Invoke();
 
-            // Hide all spots
-            foreach (var s in spots)
-            {
-                if (s != null)
-                {
-                    s.gameObject.SetActive(false);
-                }
-            }
+            // Hide all spots and their pointers
+            DeactivateAllSpots();
 
             // Notify manager to advance to next checkpoint
             if (CheckpointManager.Instance != null)
@@ -110,7 +127,14 @@ public class MultiSpotCheckpoint : MonoBehaviour
             Debug.Log("[MultiSpotCheckpoint] Wrong spot reached - hiding spot");
             onWrongSpotReached?.Invoke();
 
-            // Just hide this wrong spot
+            // Disable the pointer for this wrong spot
+            var pointer = spot.GetComponent<OnScreenPointerObject>();
+            if (pointer != null)
+            {
+                pointer.enabled = false;
+            }
+
+            // Hide this wrong spot
             spot.gameObject.SetActive(false);
         }
     }

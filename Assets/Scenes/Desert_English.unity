@@ -6211,11 +6211,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CheckpointManager
   checkpoints:
   - {fileID: 1120201358}
+  - {fileID: 383823632}
   - {fileID: 1099969164}
   - {fileID: 868230895}
   - {fileID: 2090504514}
   - {fileID: 1059776523}
-  - {fileID: 383823632}
   - {fileID: 890757922}
   playOnStart: 1
 --- !u!4 &240173462
@@ -17733,7 +17733,7 @@ Transform:
   m_GameObject: {fileID: 673859745}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 485.5364, y: 0.00001, z: 537.49286}
+  m_LocalPosition: {x: 485.5364, y: -0.2, z: 537.49286}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -26112,118 +26112,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7387706064836869012, guid: a5787d33de26c394190de4dce592f521, type: 3}
---- !u!1 &967641242
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 967641243}
-  - component: {fileID: 967641246}
-  - component: {fileID: 967641245}
-  - component: {fileID: 967641244}
-  m_Layer: 0
-  m_Name: Cheif
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &967641243
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 967641242}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.253, y: -0.5, z: 10.77}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1314024611}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &967641244
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 967641242}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &967641245
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 967641242}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &967641246
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 967641242}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &968202695 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9b80b015d59e59441a2aa14c2a389e5c, type: 3}
@@ -31202,7 +31090,7 @@ MonoBehaviour:
   - dialogueCharacter: {fileID: 11400000, guid: 0db1a2c3635986e42afb736918b89140, type: 2}
     sentence: This bucket seems interesting
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: 2234ace027aab1a4c9fdc4631ea205a2, type: 3}
+    sentenceSound: {fileID: 8300000, guid: 5d48879d43da8d34badbfb1fb64da048, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -31676,8 +31564,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.346, y: 0.24, z: -0.276}
-  m_LocalScale: {x: 2, y: 2, z: 2}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1169928954}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -31826,21 +31714,21 @@ MonoBehaviour:
   - dialogueCharacter: {fileID: 11400000, guid: 0db1a2c3635986e42afb736918b89140, type: 2}
     sentence: Jaafar. It ends here.
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: d4c410dad781f3c48a6392d9560a9ecb, type: 3}
+    sentenceSound: {fileID: 8300000, guid: 2b8529c81c42e724999035062c5d3391, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
   - dialogueCharacter: {fileID: 11400000, guid: 7a109699d1ffc72488d09e4768fb9fab, type: 2}
     sentence: "So\u2026 the eagle finally led you to me."
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: acb19a6f601d36b47a4f96a670f2f37e, type: 3}
+    sentenceSound: {fileID: 8300000, guid: e4c5dc6313ff692429e91634370e67f4, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
   - dialogueCharacter: {fileID: 11400000, guid: 0db1a2c3635986e42afb736918b89140, type: 2}
     sentence: You stole the Great Pearl of Milh. That pearl belongs to my people.
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: b54b391170dcb204ab9fb40c43634084, type: 3}
+    sentenceSound: {fileID: 8300000, guid: af1c9f16f08af5742b2d64b8b0fe851a, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -31851,28 +31739,28 @@ MonoBehaviour:
 
 '
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: e83c7ff5c4582f74a9375fc4fbdd58fd, type: 3}
+    sentenceSound: {fileID: 8300000, guid: 00558d9dcea534a48b5fd34fb7000011, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
   - dialogueCharacter: {fileID: 11400000, guid: 0db1a2c3635986e42afb736918b89140, type: 2}
     sentence: Return the pearl. Now.
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: eb23b0bf54c44bd4bafd4f9caf416347, type: 3}
+    sentenceSound: {fileID: 8300000, guid: c4f3a1e1d67d53d41b88d3c0f11aad54, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
   - dialogueCharacter: {fileID: 11400000, guid: 7a109699d1ffc72488d09e4768fb9fab, type: 2}
     sentence: And if I refuse?
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: 219de4e65c9b16841adcb73c67e467d7, type: 3}
+    sentenceSound: {fileID: 8300000, guid: 8dd47c3e9641d8b4c8913f11d926fe1a, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
   - dialogueCharacter: {fileID: 11400000, guid: 0db1a2c3635986e42afb736918b89140, type: 2}
     sentence: "Then you answer to the elders\u2026 and to the people you betrayed."
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: c89c109bf55b943489241c99eb7a4fdc, type: 3}
+    sentenceSound: {fileID: 8300000, guid: d5ad60dc1a8857c47883bedeab8df951, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -31880,28 +31768,28 @@ MonoBehaviour:
     sentence: The pearl was meant to buy freedom. But freedom bought with theft is
       no freedom at all.
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: 6bd06bfb7cf4db5449cc3fb7b25b85de, type: 3}
+    sentenceSound: {fileID: 8300000, guid: 611db86aa94aa22448472f83929295ab, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
   - dialogueCharacter: {fileID: 11400000, guid: 7a109699d1ffc72488d09e4768fb9fab, type: 2}
     sentence: Take it. The pearl returns to Abu Dhabi.
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: d8d8e92ebbf0d89488314dc735e4dfae, type: 3}
+    sentenceSound: {fileID: 8300000, guid: d78abfc91c3e7384e8ce966537c897e1, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
   - dialogueCharacter: {fileID: 11400000, guid: 0db1a2c3635986e42afb736918b89140, type: 2}
     sentence: "You\u2019ll come with me."
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: 29f08dbde1e6d9a418e02dc70f0a4c39, type: 3}
+    sentenceSound: {fileID: 8300000, guid: e4f36b9f89655154eb2f85bff0f8746a, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
   - dialogueCharacter: {fileID: 11400000, guid: 7a109699d1ffc72488d09e4768fb9fab, type: 2}
     sentence: "\u2026I will."
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: d8d8e92ebbf0d89488314dc735e4dfae, type: 3}
+    sentenceSound: {fileID: 8300000, guid: 8bb0fad9a213e2d4284a29525a20c7ac, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -32421,7 +32309,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1169928953}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a1807e4b19a8b44f936e82c7c690cdc, type: 3}
   m_Name: 
@@ -32452,7 +32340,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1169928958
 MonoBehaviour:
@@ -33003,6 +32891,63 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5731547941117289742, guid: 0e50b5adc81fab740b1997ad4b990850, type: 3}
+--- !u!1001 &1197880139
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1314024611}
+    m_Modifications:
+    - target: {fileID: 5025124733147277407, guid: 28ca9c1769143d04eb7daca2b75eebcc, type: 3}
+      propertyPath: m_Name
+      value: SheriffNPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690022145690022629, guid: 28ca9c1769143d04eb7daca2b75eebcc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.030029297
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690022145690022629, guid: 28ca9c1769143d04eb7daca2b75eebcc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.2839985
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690022145690022629, guid: 28ca9c1769143d04eb7daca2b75eebcc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10.840027
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690022145690022629, guid: 28ca9c1769143d04eb7daca2b75eebcc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690022145690022629, guid: 28ca9c1769143d04eb7daca2b75eebcc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690022145690022629, guid: 28ca9c1769143d04eb7daca2b75eebcc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690022145690022629, guid: 28ca9c1769143d04eb7daca2b75eebcc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690022145690022629, guid: 28ca9c1769143d04eb7daca2b75eebcc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690022145690022629, guid: 28ca9c1769143d04eb7daca2b75eebcc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690022145690022629, guid: 28ca9c1769143d04eb7daca2b75eebcc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 28ca9c1769143d04eb7daca2b75eebcc, type: 3}
 --- !u!1 &1199077792 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3849762623622064168, guid: a5787d33de26c394190de4dce592f521, type: 3}
@@ -33906,7 +33851,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1235677430}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a1807e4b19a8b44f936e82c7c690cdc, type: 3}
   m_Name: 
@@ -33937,7 +33882,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 3, y: 3, z: 3}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1235677435
 MonoBehaviour:
@@ -34072,7 +34017,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1243182033}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a1807e4b19a8b44f936e82c7c690cdc, type: 3}
   m_Name: 
@@ -34103,7 +34048,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 3, y: 3, z: 3}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1243182038
 MonoBehaviour:
@@ -34672,6 +34617,68 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5211368679824291055, guid: aed3ac6c44f21d44c9ec4b6bf3052722, type: 3}
+--- !u!1001 &1266524560
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1314024611}
+    m_Modifications:
+    - target: {fileID: 3579540195629937445, guid: 8489a65c944cdd74db2b87453f23b12e, type: 3}
+      propertyPath: m_Name
+      value: ThiefNPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 4244295731964373407, guid: 8489a65c944cdd74db2b87453f23b12e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 25.243958
+      objectReference: {fileID: 0}
+    - target: {fileID: 4244295731964373407, guid: 8489a65c944cdd74db2b87453f23b12e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.853836
+      objectReference: {fileID: 0}
+    - target: {fileID: 4244295731964373407, guid: 8489a65c944cdd74db2b87453f23b12e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 105.41705
+      objectReference: {fileID: 0}
+    - target: {fileID: 4244295731964373407, guid: 8489a65c944cdd74db2b87453f23b12e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.2588191
+      objectReference: {fileID: 0}
+    - target: {fileID: 4244295731964373407, guid: 8489a65c944cdd74db2b87453f23b12e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4244295731964373407, guid: 8489a65c944cdd74db2b87453f23b12e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9659258
+      objectReference: {fileID: 0}
+    - target: {fileID: 4244295731964373407, guid: 8489a65c944cdd74db2b87453f23b12e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4244295731964373407, guid: 8489a65c944cdd74db2b87453f23b12e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4244295731964373407, guid: 8489a65c944cdd74db2b87453f23b12e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4244295731964373407, guid: 8489a65c944cdd74db2b87453f23b12e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8489a65c944cdd74db2b87453f23b12e, type: 3}
+--- !u!4 &1266524561 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4244295731964373407, guid: 8489a65c944cdd74db2b87453f23b12e, type: 3}
+  m_PrefabInstance: {fileID: 1266524560}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1266889806 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2971542036940430761, guid: aed3ac6c44f21d44c9ec4b6bf3052722, type: 3}
@@ -35160,8 +35167,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 967641243}
   - {fileID: 2147012725}
+  - {fileID: 1841230337}
+  - {fileID: 1266524561}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1319400127 stripped
@@ -35609,14 +35617,14 @@ MonoBehaviour:
   - dialogueCharacter: {fileID: 11400000, guid: 58e74a680740e3845ab5d4135c05048a, type: 2}
     sentence: Hello, Sultan.
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: 66affc13f56f1d244afeb8487abd8913, type: 3}
+    sentenceSound: {fileID: 8300000, guid: f8cd8c7bf2fc7f04eb51720f2666e116, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
   - dialogueCharacter: {fileID: 11400000, guid: 0db1a2c3635986e42afb736918b89140, type: 2}
     sentence: Zayed, have you seen anything suspicious recently?
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: 87e953921a5d58f4aaebd79686f404fe, type: 3}
+    sentenceSound: {fileID: 8300000, guid: e2dc696173a122a4797caafaf7faedf3, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -35624,14 +35632,14 @@ MonoBehaviour:
     sentence: "I heard that the Great Pearl of Milh was stolen, but I don\u2019t
       know who took it."
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: 4e62636a47420f84591b8ebe7f970fff, type: 3}
+    sentenceSound: {fileID: 8300000, guid: 73ab58a1cf0d3734d8dc5cbc9294f551, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
   - dialogueCharacter: {fileID: 11400000, guid: 0db1a2c3635986e42afb736918b89140, type: 2}
     sentence: Can you help me identify where these three items might be from?
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: 846d262a452782c47a6693e29048884d, type: 3}
+    sentenceSound: {fileID: 8300000, guid: ebd5094a0a6fb634a82df7f928d190a2, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -35639,14 +35647,14 @@ MonoBehaviour:
     sentence: "These rags\u2026 they\u2019re soft. They must be from the city of
       Dubai."
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: 4113c5dc4e6ce1f45a1f040e1be62fea, type: 3}
+    sentenceSound: {fileID: 8300000, guid: 5d3b6bd0c6072c345a47377e05032b4a, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
   - dialogueCharacter: {fileID: 11400000, guid: 58e74a680740e3845ab5d4135c05048a, type: 2}
     sentence: "As for this bucket, I\u2019ve seen the same style sold in Liwa."
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: 0b0f6592f6c005043a992384284679d5, type: 3}
+    sentenceSound: {fileID: 8300000, guid: 4c9dfb30e9a11894d84c0919ee817a1a, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -35654,14 +35662,14 @@ MonoBehaviour:
     sentence: "And finally, these shoes look familiar\u2026 yes, they bear the Awamir
       tribe\u2019s mark. They must be from Al Ain."
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: d36da345f875a434c932592b9e6480f5, type: 3}
+    sentenceSound: {fileID: 8300000, guid: ec0c5f5420a83fe4a9b096417fcbf522, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
   - dialogueCharacter: {fileID: 11400000, guid: 0db1a2c3635986e42afb736918b89140, type: 2}
     sentence: "Then I\u2019d better get moving."
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: f32f6aec36186f74683ca1581b6ac6d7, type: 3}
+    sentenceSound: {fileID: 8300000, guid: c3e16805c3973804ab9a360b01c469f0, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -39876,7 +39884,7 @@ MonoBehaviour:
   - dialogueCharacter: {fileID: 11400000, guid: 0db1a2c3635986e42afb736918b89140, type: 2}
     sentence: This bucket seems interesting
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: 2234ace027aab1a4c9fdc4631ea205a2, type: 3}
+    sentenceSound: {fileID: 8300000, guid: 5d48879d43da8d34badbfb1fb64da048, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -40990,7 +40998,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -48591,6 +48599,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3525479140033381557, guid: a5787d33de26c394190de4dce592f521, type: 3}
+--- !u!4 &1841230337 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5690022145690022629, guid: 28ca9c1769143d04eb7daca2b75eebcc, type: 3}
+  m_PrefabInstance: {fileID: 1197880139}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1841592111 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4240837251885561862, guid: a5787d33de26c394190de4dce592f521, type: 3}
@@ -53305,7 +53318,7 @@ MonoBehaviour:
     sentence: Sheikh Khalfan, the Great Pearl of Milh has been returned to its rightful
       place.
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: 8c12f35c2f9ce674f8ecd2ac2ad40f81, type: 3}
+    sentenceSound: {fileID: 8300000, guid: 94f36da82a2c0534cb41c54d7bf97423, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -53317,7 +53330,7 @@ MonoBehaviour:
 
 '
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: c4a1a9eedf649614183c159832b6a3a4, type: 3}
+    sentenceSound: {fileID: 8300000, guid: ddde3301768f34543b7e281a85248b76, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -53325,14 +53338,14 @@ MonoBehaviour:
     sentence: I found the thief, Sheikh. His name is Jaafar, and he confessed to
       his crime.
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: debd99c3d66d0104eaefff600f2ef5c9, type: 3}
+    sentenceSound: {fileID: 8300000, guid: 98b70f2576fe7ff4e8e5e61ed8b257ea, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
   - dialogueCharacter: {fileID: 11400000, guid: 9016a1e35e20bb54aa95027a2b6896aa, type: 2}
     sentence: And what drove him to do this?
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: 3e74507bea560cc4cae54127aef67157, type: 3}
+    sentenceSound: {fileID: 8300000, guid: 90a3e9713de87ef40802a0c8ffc4903b, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -53340,7 +53353,7 @@ MonoBehaviour:
     sentence: He said the pearl was meant to buy his freedom, but he realized that
       freedom gained through betrayal is no freedom at all.
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: a8618049946f8f640b77d82af3025532, type: 3}
+    sentenceSound: {fileID: 8300000, guid: 22f155047056cd949869dbc2b25cb05e, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -53348,14 +53361,14 @@ MonoBehaviour:
     sentence: You speak the truth. One who betrays his people finds only loss, not
       freedom.
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: 6fe86524d50698a40a5309c660e75017, type: 3}
+    sentenceSound: {fileID: 8300000, guid: b1b9d03361950ae42a68105ef068d3f1, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
   - dialogueCharacter: {fileID: 11400000, guid: 0db1a2c3635986e42afb736918b89140, type: 2}
     sentence: He returned with me willingly. He now awaits your judgment.
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: 8724091eb2f073546a3490c12d6122da, type: 3}
+    sentenceSound: {fileID: 8300000, guid: c3900f61b79c9b84397355697c14891b, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -53366,7 +53379,7 @@ MonoBehaviour:
 
 '
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: 5622212103d6a3343bb4d2466b5c30a7, type: 3}
+    sentenceSound: {fileID: 8300000, guid: ae8f7d38a3de44b408d2b46951aeb37a, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -53374,14 +53387,14 @@ MonoBehaviour:
     sentence: "Sultan, you have shown courage and restraint. You did not follow anger
       \u2014 you followed what is right."
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: 47ad523817b25d24b9a3ee1feda8b200, type: 3}
+    sentenceSound: {fileID: 8300000, guid: 9b8bf4060f6a7204391036693db831cd, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
   - dialogueCharacter: {fileID: 11400000, guid: 0db1a2c3635986e42afb736918b89140, type: 2}
     sentence: I only did what my duty demanded, for my people and my city.
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: 4739bacd4879cfc46aee02a706af7525, type: 3}
+    sentenceSound: {fileID: 8300000, guid: e11e0461ee633534ca172822d506ff2d, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -53389,7 +53402,7 @@ MonoBehaviour:
     sentence: In doing so, you have preserved the honor of the Bani Yas and protected
       our home.
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: 82f0f418a845e0d468e5ae6ffe4d6770, type: 3}
+    sentenceSound: {fileID: 8300000, guid: db3fb75a97536ef4ea54d59490be4314, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -53397,14 +53410,14 @@ MonoBehaviour:
     sentence: The Great Pearl of Milh will remain a symbol of our unity, and your
       story will stand as a testament to trust and honor.
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: 47ad523817b25d24b9a3ee1feda8b200, type: 3}
+    sentenceSound: {fileID: 8300000, guid: 514b3f2d9408d4f4692fb27b764cdf9e, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
-  - dialogueCharacter: {fileID: 11400000, guid: 9016a1e35e20bb54aa95027a2b6896aa, type: 2}
+  - dialogueCharacter: {fileID: 11400000, guid: 0db1a2c3635986e42afb736918b89140, type: 2}
     sentence: That is an honor, Sheikh.
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: 47ad523817b25d24b9a3ee1feda8b200, type: 3}
+    sentenceSound: {fileID: 8300000, guid: 4b1c0a17d7c7e0241b0f55da6da60adc, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
