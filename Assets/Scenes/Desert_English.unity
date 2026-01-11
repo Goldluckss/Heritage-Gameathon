@@ -6584,11 +6584,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CheckpointManager
   checkpoints:
   - {fileID: 1120201358}
-  - {fileID: 383823632}
   - {fileID: 1099969164}
   - {fileID: 868230895}
   - {fileID: 2090504514}
   - {fileID: 1059776523}
+  - {fileID: 383823632}
   - {fileID: 890757922}
   playOnStart: 1
 --- !u!4 &240173462
@@ -33099,7 +33099,7 @@ Transform:
   m_GameObject: {fileID: 1153291844}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.811, y: 0.24, z: -0.67}
+  m_LocalPosition: {x: -0.527, y: 0.24, z: -0.526}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
