@@ -12,6 +12,9 @@ namespace HeneGames.DialogueSystem
         private bool dialogueIsOn;
         private DialogueTrigger dialogueTrigger;
 
+        // Static flag for movement locking - accessible from any script
+        public static bool IsDialogueActive { get; private set; }
+
         public enum TriggerState
         {
             Collision,
@@ -206,6 +209,10 @@ namespace HeneGames.DialogueSystem
             Debug.Log("[DialogueManager] AudioSource null check: " + (audioSource == null ? "NULL!" : "OK - " + audioSource.gameObject.name));
             Debug.Log("[DialogueManager] Sentences count: " + sentences.Count);
             
+            // Lock player movement
+            IsDialogueActive = true;
+            Debug.Log("[DialogueManager] Player movement LOCKED");
+            
             //Start event
             if(dialogueTrigger != null)
             {
@@ -297,6 +304,10 @@ namespace HeneGames.DialogueSystem
         public void StopDialogue()
         {
             Debug.Log("[DialogueManager] StopDialogue() called");
+            
+            // Unlock player movement
+            IsDialogueActive = false;
+            Debug.Log("[DialogueManager] Player movement UNLOCKED");
             
             //Stop dialogue event
             if (dialogueTrigger != null)
