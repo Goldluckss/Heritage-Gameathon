@@ -10,6 +10,7 @@ public class PlayerManager : MonoBehaviour
     PlayerLocomotion playerLocomotion;
 
     public bool isInteracting;
+    public bool isGrounded;
 
     private void Awake()
     {

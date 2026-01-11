@@ -19,16 +19,11 @@ public class AnimatorManager : MonoBehaviour
     {
         animator.SetBool("isInteracting", isInteracting);
         animator.CrossFade(targetAnimation, 0.2f);
-
     }
 
-    public void UpdateAnimatorValues(float horizontalMovement, float verticalMovement, bool isSprinting)
+    public void UpdateAnimatorValues(float horizontalMovement, float verticalMovement, bool isSprinting, bool isGrounded)
     {
-        if (animator == null || animator.runtimeAnimatorController == null)
-        {
-            return;
-        }
-
+        // Animation Snapping
         float snappedHorizontal;
         float snappedVertical;
 
@@ -82,5 +77,6 @@ public class AnimatorManager : MonoBehaviour
         
         animator.SetFloat(horizontal, snappedHorizontal, dampingTime, Time.deltaTime);
         animator.SetFloat(vertical, snappedVertical, dampingTime, Time.deltaTime);
+        animator.SetBool("isGrounded", isGrounded);
     }
 }
