@@ -55,21 +55,16 @@ public class AnimatorManager : MonoBehaviour
         }
         #endregion
         #region Snapped Vertical
-        if (verticalMovement > 0 && verticalMovement < 0.55f)
+        // Use absolute value to handle backward movement (blend tree expects 0-1 range)
+        float absVerticalMovement = Mathf.Abs(verticalMovement);
+        
+        if (absVerticalMovement > 0 && absVerticalMovement < 0.55f)
         {
             snappedVertical = 0.5f;
         }
-        else if (verticalMovement >= 0.55f)
+        else if (absVerticalMovement >= 0.55f)
         {
             snappedVertical = 1;
-        }
-        else if (verticalMovement < 0 && verticalMovement > -0.55f)
-        {
-            snappedVertical = -0.5f;
-        }
-        else if (verticalMovement <= -0.55f)
-        {
-            snappedVertical = -1;
         }
         else
         {
