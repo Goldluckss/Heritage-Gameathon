@@ -12344,6 +12344,18 @@ PrefabInstance:
       value: 1801810542
       objectReference: {fileID: 0}
     - target: {fileID: 6449296285419502213, guid: 66a0aba2ba55058439c92574558222ac, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 5163b4b8d9c022047b99314142f0827a, type: 2}
+    - target: {fileID: 6449296285419502213, guid: 66a0aba2ba55058439c92574558222ac, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 129278707706121065, guid: 5163b4b8d9c022047b99314142f0827a, type: 2}
+    - target: {fileID: 6449296285419502213, guid: 66a0aba2ba55058439c92574558222ac, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6449296285419502213, guid: 66a0aba2ba55058439c92574558222ac, type: 3}
       propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
       value: 1801810542
       objectReference: {fileID: 0}
@@ -52135,6 +52147,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5866666021909216657, guid: fce7d00cbca170142b465afa709955fa, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: fce7d00cbca170142b465afa709955fa, type: 3}
+    - target: {fileID: 5866666021909216657, guid: fce7d00cbca170142b465afa709955fa, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 1df80cc79c2927143aea21ea5d8db401, type: 2}
     - target: {fileID: 414444557932210576, guid: 31345b85e8eb2704fa3eade147a62a98, type: 3}
       propertyPath: m_Name
       value: Player
@@ -52151,14 +52171,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 515.9438
       objectReference: {fileID: 0}
-    - target: {fileID: 5866666021909216657, guid: fce7d00cbca170142b465afa709955fa, type: 3}
-      propertyPath: m_Avatar
-      value: 
-      objectReference: {fileID: 9000000, guid: fce7d00cbca170142b465afa709955fa, type: 3}
-    - target: {fileID: 5866666021909216657, guid: fce7d00cbca170142b465afa709955fa, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 1df80cc79c2927143aea21ea5d8db401, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
