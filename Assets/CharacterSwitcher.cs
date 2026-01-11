@@ -84,6 +84,11 @@ public class CharacterSwitcher : MonoBehaviour
     private float originalCameraManagerLookAngle;
     private float originalCameraManagerPivotAngle;
 
+    // Store original collision state
+    private Collider[] eagleColliders;
+    private bool[] originalColliderStates;
+    private int originalEagleLayer;
+
     // Input System
     private PlayerControls playerControls;
 
@@ -111,6 +116,17 @@ public class CharacterSwitcher : MonoBehaviour
             {
                 eagleMeshRoot = eagle.transform;
             }
+
+            // Cache all colliders on the eagle (including children)
+            eagleColliders = eagle.GetComponentsInChildren<Collider>();
+            originalColliderStates = new bool[eagleColliders.Length];
+            for (int i = 0; i < eagleColliders.Length; i++)
+            {
+                originalColliderStates[i] = eagleColliders[i].enabled;
+            }
+
+            // Store original layer
+            originalEagleLayer = eagle.layer;
 
             // Auto-setup the grab detector on eagle
             EagleGrabDetector grabDetector = eagle.GetComponent<EagleGrabDetector>();
@@ -273,6 +289,9 @@ public class CharacterSwitcher : MonoBehaviour
         eagleReturning = true;
         controllingEagle = false;
 
+        // Disable eagle collisions so it can phase through walls
+        SetEagleCollisionsEnabled(false);
+
         if (eagleRigidbody != null)
         {
             eagleRigidbody.linearVelocity = Vector3.zero;
@@ -301,6 +320,59 @@ public class CharacterSwitcher : MonoBehaviour
         mainCamera.transform.SetParent(originalCameraParent);
         mainCamera.transform.localPosition = originalCameraLocalPosition;
         mainCamera.transform.localRotation = originalCameraLocalRotation;
+    }
+
+    /// <summary>
+    /// Enables or disables all colliders on the eagle.
+    /// </summary>
+    void SetEagleCollisionsEnabled(bool enabled)
+    {
+        if (eagleColliders == null) return;
+
+        if (enabled)
+        {
+            // Restore original collider states
+            for (int i = 0; i < eagleColliders.Length; i++)
+            {
+                if (eagleColliders[i] != null)
+                {
+                    eagleColliders[i].enabled = originalColliderStates[i];
+                }
+            }
+            
+            // Restore original layer
+            SetEagleLayerRecursive(eagle.transform, originalEagleLayer);
+            
+            Debug.Log("[CharacterSwitcher] Eagle collisions ENABLED");
+        }
+        else
+        {
+            // Disable all colliders
+            for (int i = 0; i < eagleColliders.Length; i++)
+            {
+                if (eagleColliders[i] != null)
+                {
+                    eagleColliders[i].enabled = false;
+                }
+            }
+            
+            // Optionally change to IgnoreRaycast layer (layer 2) for extra safety
+            // SetEagleLayerRecursive(eagle.transform, 2);
+            
+            Debug.Log("[CharacterSwitcher] Eagle collisions DISABLED");
+        }
+    }
+
+    /// <summary>
+    /// Sets the layer of the eagle and all its children recursively.
+    /// </summary>
+    void SetEagleLayerRecursive(Transform root, int layer)
+    {
+        root.gameObject.layer = layer;
+        foreach (Transform child in root)
+        {
+            SetEagleLayerRecursive(child, layer);
+        }
     }
 
     void HandleEagleReturn()
@@ -360,6 +432,9 @@ public class CharacterSwitcher : MonoBehaviour
         Debug.Log("Eagle returned to player");
 
         eagleReturning = false;
+
+        // Re-enable eagle collisions now that it's back
+        SetEagleCollisionsEnabled(true);
 
         // Drop the item now that eagle has returned
         if (isGrabbing && dropItemOnReturn)

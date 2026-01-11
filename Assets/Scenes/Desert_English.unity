@@ -4839,7 +4839,7 @@ MonoBehaviour:
     sentence: Sultan, the Great Pearl of Milh has been taken. This pearl keeps our
       city alive and prosperous. Take my compass.
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: a4210a66fd2e6ec40a8742b96a0abea9, type: 3}
+    sentenceSound: {fileID: 8300000, guid: c1480664ee3294d4b9d989737f049998, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -4847,14 +4847,14 @@ MonoBehaviour:
     sentence: "I will find it and bring back the Great Pearl of Milh, the Bani Yas
       tribe\u2019s greatest treasure."
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: 0c6b2317d6998d54ebcd4b18e2dea7cc, type: 3}
+    sentenceSound: {fileID: 8300000, guid: 69047bdb6b854b84f958df34c91bbc1a, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
   - dialogueCharacter: {fileID: 11400000, guid: 9016a1e35e20bb54aa95027a2b6896aa, type: 2}
     sentence: Use the compass to look for clues around town, Good luck.
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: dd91ca35aa9ef614d983cde5966f1975, type: 3}
+    sentenceSound: {fileID: 8300000, guid: b59e2b66fa33a944eaedaa161ef19634, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -4862,7 +4862,7 @@ MonoBehaviour:
     sentence: After that ask around town, they might know about the thief that took
       it.
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: df4f7a77f044a584abab6acdd77a21c0, type: 3}
+    sentenceSound: {fileID: 8300000, guid: 2a066fcc2f274f74babd35d220993228, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -22182,7 +22182,7 @@ MonoBehaviour:
     sentence: This is the softest rag I have ever touched, I wonder where this came
       from
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: f262137f00910034cbf0bd7cb3a64702, type: 3}
+    sentenceSound: {fileID: 8300000, guid: e401d160abbca6345a2cc5751405760d, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -27677,7 +27677,7 @@ MonoBehaviour:
   - dialogueCharacter: {fileID: 11400000, guid: 0db1a2c3635986e42afb736918b89140, type: 2}
     sentence: This bucket seems interesting
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: 2234ace027aab1a4c9fdc4631ea205a2, type: 3}
+    sentenceSound: {fileID: 8300000, guid: 228eb85fd34de9d4981446cff23939aa, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -43581,7 +43581,7 @@ MonoBehaviour:
   - dialogueCharacter: {fileID: 11400000, guid: 0db1a2c3635986e42afb736918b89140, type: 2}
     sentence: Why did someone leave these shoes out here
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: 19fbbac09e8b66547a40c28fe37e4883, type: 3}
+    sentenceSound: {fileID: 8300000, guid: bc58905be9dfde54eb15970c6a6847f0, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
