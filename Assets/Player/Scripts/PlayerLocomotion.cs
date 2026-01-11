@@ -41,6 +41,7 @@ public class PlayerLocomotion : MonoBehaviour
     CapsuleCollider playerCollider;
     float originalHeight;
     Vector3 originalCenter;
+    Vector3 normalVector; // Slope handling
 
     public void Awake()
     {
@@ -53,6 +54,7 @@ public class PlayerLocomotion : MonoBehaviour
         playerCollider = GetComponent<CapsuleCollider>();
         originalHeight = playerCollider.height;
         originalCenter = playerCollider.center;
+        normalVector = Vector3.up; // Default to flat ground
     }
 
     public void HandleALLMovement()
@@ -94,15 +96,36 @@ public class PlayerLocomotion : MonoBehaviour
             }
 
             moveDirection = moveDirection * speed;
-            finalVelocity = moveDirection;
+
+            // SLOPE HANDLING: Project movement onto the slope
+            Vector3 projectedVelocity = Vector3.ProjectOnPlane(moveDirection, normalVector).normalized * speed; 
+            // Note: ProjectOnPlane can change magnitude, so we re-normalize and apply speed to maintain consistency?
+            // Actually, usually we want the projection to keep the horizontal speed component or full speed? 
+            // If we just project, moving up a steep slope reduces horizontal speed but adds vertical.
+            // Let's force the speed magnitude to remain constant to fix "Slow" movement.
+            
+            finalVelocity = projectedVelocity;
+            
+            // DEBUG: Slope Logic
+             if(Mathf.Abs(inputManager.moveAmount) > 0)
+                 Debug.Log($"Normal: {normalVector} | RawSpd: {moveDirection.magnitude} | ProjSpd: {finalVelocity.magnitude}"); // Slope debug
         }
         else
         {
             // If interacting (e.g. Landing), kill horizontal velocity (or keep it zero)
         }
 
-        // Apply Vertical Velocity (Y) - ALWAYS
-        finalVelocity.y = inAirYVelocity;
+        // Apply Vertical Velocity (Y) - ONLY if falling/jumping OR if we are grounded but not moving?
+        // Actually, if we are grounded, the slope logic already handled the Y component.
+        // If we force y = inAirYVelocity (-5), we fight the slope.
+        
+        if (!isGrounded)
+        {
+             finalVelocity.y = inAirYVelocity;
+        }
+        // Else: Trust the slope projection. 
+        // Note: ResetGravity sets inAirYVelocity to -5 typically. If we ignore it, we might float? 
+        // But if normalVector is up, projectedVelocity.y is 0, so we are fine.
 
         // DEBUG: Print movement values
         // Debug.Log($"Grounded: {isGrounded} | Speed: {moveDirection.magnitude} | Y-Vel: {inAirYVelocity}");
@@ -180,6 +203,7 @@ public class PlayerLocomotion : MonoBehaviour
             }
 
             Vector3 rayCastHitPoint = hit.point;
+            normalVector = hit.normal;
             
             // If we are jumping (positive Y velocity) we should NOT snap to ground yet.
             if (inAirYVelocity > 0)
