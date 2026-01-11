@@ -5,101 +5,122 @@ using UnityEngine.InputSystem;
 
 public class InputManager : MonoBehaviour
 {
-	PlayerControls playerControls;
-	PlayerLocomotion playerLocomotion;
+    PlayerControls playerControls;
+    PlayerLocomotion playerLocomotion;
     AnimatorManager animatorManager;
-	PlayerControls.PlayerMovementActions playerActions;
-	PlayerControls.PlayerActionsActions playerActionsActions;
+    PlayerManager playerManager;
 
-	public Vector2 movementInput;
-	public Vector2 cameraInput;
+    PlayerControls.PlayerMovementActions playerActions;
+    PlayerControls.PlayerActionsActions playerActionsActions;
 
-	public float cameraInputX;
-	public float cameraInputY;
+    public Vector2 movementInput;
+    public Vector2 cameraInput;
+
+    public float cameraInputX;
+    public float cameraInputY;
 
     public float moveAmount;
     public float verticalInput;
-	public float horizontalInput;
+    public float horizontalInput;
 
-	public bool shiftInput;
+    public bool shiftInput;
+    public bool jumpInput;
 
     private void Awake()
-	{
-		playerControls = new PlayerControls();
-		playerActions = playerControls.PlayerMovement;
-		playerActionsActions = playerControls.PlayerActions;
+    {
+        playerControls = new PlayerControls();
+        playerActions = playerControls.PlayerMovement;
+        playerActionsActions = playerControls.PlayerActions;
 
-		animatorManager = GetComponent<AnimatorManager>();
-		playerLocomotion = GetComponent<PlayerLocomotion>();
+        animatorManager = GetComponent<AnimatorManager>();
+        playerLocomotion = GetComponent<PlayerLocomotion>();
+        playerManager = GetComponent<PlayerManager>();
     }
 
-	private void OnEnable()
-	{
-		playerActions.Enable();
-		playerActionsActions.Enable();
+    private void OnEnable()
+    {
+        playerActions.Enable();
+        playerActionsActions.Enable();
 
-		playerActionsActions.Sprint.performed += OnSprintPerformed;
-		playerActionsActions.Sprint.canceled += OnSprintCanceled;
+        playerActionsActions.Sprint.performed += OnSprintPerformed;
+        playerActionsActions.Sprint.canceled += OnSprintCanceled;
+        playerActionsActions.Jump.performed += OnJumpPerformed;
+
     }
 
-	private void OnSprintPerformed(UnityEngine.InputSystem.InputAction.CallbackContext context)
-	{
-		shiftInput = true;
-	}
+    private void OnSprintPerformed(UnityEngine.InputSystem.InputAction.CallbackContext context)
+    {
+        shiftInput = true;
+    }
 
-	private void OnSprintCanceled(UnityEngine.InputSystem.InputAction.CallbackContext context)
-	{
-		shiftInput = false;
-	}
+    private void OnSprintCanceled(UnityEngine.InputSystem.InputAction.CallbackContext context)
+    {
+        shiftInput = false;
+    }
 
-	private void Update()
-	{
-		movementInput = playerActions.Movement.ReadValue<Vector2>();
-		cameraInput = playerActions.Camera.ReadValue<Vector2>();
-	}
+    private void OnJumpPerformed(UnityEngine.InputSystem.InputAction.CallbackContext context)
+    {
+        jumpInput = true;
+    }
 
-	private void OnDisable()
-	{
-		playerActions.Disable();
-		playerActionsActions.Disable();
+    private void Update()
+    {
+        movementInput = playerActions.Movement.ReadValue<Vector2>();
+        cameraInput = playerActions.Camera.ReadValue<Vector2>();
+    }
 
-		playerActionsActions.Sprint.performed -= OnSprintPerformed;
-		playerActionsActions.Sprint.canceled -= OnSprintCanceled;
-	}
+    private void OnDisable()
+    {
+        playerActions.Disable();
+        playerActionsActions.Disable();
 
-	private void OnDestroy()
-	{
-		playerControls?.Dispose();
-	}
+        playerActionsActions.Sprint.performed -= OnSprintPerformed;
+        playerActionsActions.Sprint.canceled -= OnSprintCanceled;
+    }
 
-	public void HandleALLInput()
-	{
-		HandleMovementInput();
-		HandleSprintingInput();
+    private void OnDestroy()
+    {
+        playerControls?.Dispose();
+    }
+
+    public void HandleALLInput()
+    {
+        HandleMovementInput();
+        HandleSprintingInput();
+        HandleJumpingInput();
     }
 
     private void HandleMovementInput()
-	{
-		verticalInput = movementInput.y;
-		horizontalInput = movementInput.x;
+    {
+        verticalInput = movementInput.y;
+        horizontalInput = movementInput.x;
 
-		cameraInputX = cameraInput.x;
-		cameraInputY = cameraInput.y;
+        cameraInputX = cameraInput.x;
+        cameraInputY = cameraInput.y;
 
         moveAmount = Mathf.Clamp01(Mathf.Abs(horizontalInput) + Mathf.Abs(verticalInput));
     }
 
-	private void HandleSprintingInput()
-	{
-		if (shiftInput && moveAmount > 0.5f)
-		{
-			playerLocomotion.isSprinting = true;
+    private void HandleSprintingInput()
+    {
+        if (shiftInput && moveAmount > 0.5f)
+        {
+            playerLocomotion.isSprinting = true;
         }
-		else
-		{
-			playerLocomotion.isSprinting = false;
+        else
+        {
+            playerLocomotion.isSprinting = false;
         }
         
-        animatorManager.UpdateAnimatorValues(horizontalInput, verticalInput, playerLocomotion.isSprinting);
+        animatorManager.UpdateAnimatorValues(horizontalInput, verticalInput, playerLocomotion.isSprinting, playerManager.isGrounded);
+    }
+
+    private void HandleJumpingInput()
+    {         
+        if (jumpInput)
+        {
+            jumpInput = false;
+            playerLocomotion.HandleJumping();
+        }
     }
 }

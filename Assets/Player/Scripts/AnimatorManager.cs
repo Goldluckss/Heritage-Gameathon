@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AnimatorManager : MonoBehaviour
 {
-    Animator animator;
+    public Animator animator;
     int horizontal;
     int vertical;
 
@@ -19,16 +19,11 @@ public class AnimatorManager : MonoBehaviour
     {
         animator.SetBool("isInteracting", isInteracting);
         animator.CrossFade(targetAnimation, 0.2f);
-
     }
 
-    public void UpdateAnimatorValues(float horizontalMovement, float verticalMovement, bool isSprinting)
+    public void UpdateAnimatorValues(float horizontalMovement, float verticalMovement, bool isSprinting, bool isGrounded)
     {
-        if (animator == null || animator.runtimeAnimatorController == null)
-        {
-            return;
-        }
-
+        // Animation Snapping
         float snappedHorizontal;
         float snappedVertical;
 
@@ -55,21 +50,16 @@ public class AnimatorManager : MonoBehaviour
         }
         #endregion
         #region Snapped Vertical
-        if (verticalMovement > 0 && verticalMovement < 0.55f)
+        // Use absolute value to handle backward movement (blend tree expects 0-1 range)
+        float absVerticalMovement = Mathf.Abs(verticalMovement);
+        
+        if (absVerticalMovement > 0 && absVerticalMovement < 0.55f)
         {
             snappedVertical = 0.5f;
         }
-        else if (verticalMovement >= 0.55f)
+        else if (absVerticalMovement >= 0.55f)
         {
             snappedVertical = 1;
-        }
-        else if (verticalMovement < 0 && verticalMovement > -0.55f)
-        {
-            snappedVertical = -0.5f;
-        }
-        else if (verticalMovement <= -0.55f)
-        {
-            snappedVertical = -1;
         }
         else
         {
@@ -87,5 +77,6 @@ public class AnimatorManager : MonoBehaviour
         
         animator.SetFloat(horizontal, snappedHorizontal, dampingTime, Time.deltaTime);
         animator.SetFloat(vertical, snappedVertical, dampingTime, Time.deltaTime);
+        animator.SetBool("isGrounded", isGrounded);
     }
 }
