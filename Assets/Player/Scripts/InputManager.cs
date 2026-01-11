@@ -24,6 +24,7 @@ public class InputManager : MonoBehaviour
     public float horizontalInput;
 
     public bool shiftInput;
+    public bool jumpInput;
 
     private void Awake()
     {
@@ -43,6 +44,8 @@ public class InputManager : MonoBehaviour
 
         playerActionsActions.Sprint.performed += OnSprintPerformed;
         playerActionsActions.Sprint.canceled += OnSprintCanceled;
+        playerActionsActions.Jump.performed += OnJumpPerformed;
+
     }
 
     private void OnSprintPerformed(UnityEngine.InputSystem.InputAction.CallbackContext context)
@@ -53,6 +56,11 @@ public class InputManager : MonoBehaviour
     private void OnSprintCanceled(UnityEngine.InputSystem.InputAction.CallbackContext context)
     {
         shiftInput = false;
+    }
+
+    private void OnJumpPerformed(UnityEngine.InputSystem.InputAction.CallbackContext context)
+    {
+        jumpInput = true;
     }
 
     private void Update()
@@ -79,6 +87,7 @@ public class InputManager : MonoBehaviour
     {
         HandleMovementInput();
         HandleSprintingInput();
+        HandleJumpingInput();
     }
 
     private void HandleMovementInput()
@@ -104,5 +113,14 @@ public class InputManager : MonoBehaviour
         }
         
         animatorManager.UpdateAnimatorValues(horizontalInput, verticalInput, playerLocomotion.isSprinting, playerManager.isGrounded);
+    }
+
+    private void HandleJumpingInput()
+    {         
+        if (jumpInput)
+        {
+            jumpInput = false;
+            playerLocomotion.HandleJumping();
+        }
     }
 }
