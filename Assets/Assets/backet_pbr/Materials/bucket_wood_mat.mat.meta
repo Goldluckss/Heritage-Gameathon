@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4181255112b44ed489cef0486648458d
+timeCreated: 1463471595
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 63014
+  packageName: Old Wooden Bucket PBR
+  packageVersion: 1.0
+  assetPath: Assets/backet_pbr/Materials/bucket_wood_mat.mat
+  uploadId: 118135
