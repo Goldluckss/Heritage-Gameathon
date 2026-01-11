@@ -4836,23 +4836,42 @@ MonoBehaviour:
   triggerState: 0
   sentences:
   - dialogueCharacter: {fileID: 11400000, guid: 9016a1e35e20bb54aa95027a2b6896aa, type: 2}
-    sentence: 
+    sentence: "\u064A\u064E\u0627 \u0633\u064F\u0644\u0652\u0637\u064E\u0627\u0646\u064F\u060C
+      \u0644\u064E\u0642\u064E\u062F\u0652 \u0633\u064F\u0631\u0650\u0642\u064E\u062A\u0652
+      \u0644\u064F\u0624\u0652\u0644\u064F\u0624\u064E\u0629\u064F \u0645\u0650\u064A\u0644\u064E\u062D\u064E
+      \u0627\u0644\u0639\u064E\u0638\u0650\u064A\u0645\u064E\u0629\u064F. \u0647\u064E\u0630\u0650\u0647\u0650
+      \u0627\u0644\u0644\u0651\u064F\u0624\u0652\u0644\u064F\u0624\u064E\u0629\u064F
+      \u062A\u064F\u0628\u0652\u0642\u0650\u064A \u0645\u064E\u062F\u0650\u064A\u0646\u064E\u062A\u064E\u0646\u064E\u0627
+      \u062D\u064E\u064A\u0651\u064E\u0629\u064B \u0648\u064E\u0645\u064F\u0632\u0652\u062F\u064E\u0647\u0650\u0631\u064E\u0629\u064B.
+      \u062E\u064F\u0630\u0652 \u0628\u064F\u0648\u0635\u064E\u0644\u064E\u062A\u0650\u064A"
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: 4984f5838d721504e9819468690bcaea, type: 3}
+    sentenceSound: {fileID: 8300000, guid: c1480664ee3294d4b9d989737f049998, type: 3}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueCharacter: {fileID: 11400000, guid: 0db1a2c3635986e42afb736918b89140, type: 2}
+    sentence: "\u0633\u064E\u0623\u064E\u0639\u0652\u062B\u064F\u0631\u064F \u0639\u064E\u0644\u064E\u064A\u0652\u0647\u064E\u0627
+      \u0648\u064E\u0623\u064F\u0639\u0650\u064A\u062F\u064F \u0644\u064F\u0624\u0652\u0644\u064F\u0624\u064E\u0629\u064E
+      \u0645\u0650\u064A\u0644\u064E\u062D\u064E \u0627\u0644\u0639\u064E\u0638\u0650\u064A\u0645\u064E\u0629\u064E\u060C
+      \u0623\u064E\u0639\u0652\u0638\u064E\u0645\u064E \u0643\u064F\u0646\u064F\u0648\u0632\u0650
+      \u0642\u064E\u0628\u0650\u064A\u0644\u064E\u0629\u0650 \u0628\u064E\u0646\u0650\u064A
+      \u064A\u064E\u0627\u0633\u064D"
+    skipDelayTime: 0
+    sentenceSound: {fileID: 8300000, guid: 69047bdb6b854b84f958df34c91bbc1a, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
   - dialogueCharacter: {fileID: 11400000, guid: 9016a1e35e20bb54aa95027a2b6896aa, type: 2}
     sentence: 
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: 43de76c2fab8e034c88a1d3a6add658e, type: 3}
+    sentenceSound: {fileID: 8300000, guid: b59e2b66fa33a944eaedaa161ef19634, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
   - dialogueCharacter: {fileID: 11400000, guid: 9016a1e35e20bb54aa95027a2b6896aa, type: 2}
     sentence: 
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: a35e61ad2adb52e4a8b57cfb9fd973bb, type: 3}
+    sentenceSound: {fileID: 8300000, guid: b59e2b66fa33a944eaedaa161ef19634, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -22043,7 +22062,17 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   triggerState: 0
-  sentences: []
+  sentences:
+  - dialogueCharacter: {fileID: 11400000, guid: 0db1a2c3635986e42afb736918b89140, type: 2}
+    sentence: "\u0647\u064E\u0630\u0650\u0647\u0650 \u0623\u064E\u0646\u0652\u0639\u064E\u0645\u064F
+      \u062E\u0650\u0631\u0652\u0642\u064E\u0629\u064D \u0644\u064E\u0645\u064E\u0633\u0652\u062A\u064F\u0647\u064E\u0627
+      \u0641\u0650\u064A \u062D\u064E\u064A\u064E\u0627\u062A\u0650\u064A\u060C \u0623\u064E\u062A\u064F\u0631\u064E\u0649
+      \u0645\u0650\u0646\u0652 \u0623\u064E\u064A\u0652\u0646\u064E \u062C\u064E\u0627\u0621\u064E\u062A\u0652\u061F"
+    skipDelayTime: 0
+    sentenceSound: {fileID: 8300000, guid: e401d160abbca6345a2cc5751405760d, type: 3}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!4 &858628846
 Transform:
   m_ObjectHideFlags: 0
@@ -22381,6 +22410,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 130243225}
+  - {fileID: 1609509331}
   m_Father: {fileID: 1345013275}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &869124537 stripped
@@ -27290,7 +27320,7 @@ Transform:
   m_GameObject: {fileID: 1029799209}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.695007, y: 10.508289, z: -86.328186}
+  m_LocalPosition: {x: -0.094, y: 0.24, z: -0.06}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -27438,10 +27468,12 @@ MonoBehaviour:
       m_Calls: []
   triggerState: 0
   sentences:
-  - dialogueCharacter: {fileID: 0}
-    sentence: 
+  - dialogueCharacter: {fileID: 11400000, guid: 0db1a2c3635986e42afb736918b89140, type: 2}
+    sentence: "\u064A\u064E\u0628\u0652\u062F\u064F\u0648 \u0647\u064E\u0630\u064E\u0627
+      \u0627\u0644\u062F\u0651\u064E\u0644\u0652\u0648\u064F \u0645\u064F\u062B\u0650\u064A\u0631\u064B\u0627
+      \u0644\u0650\u0644\u0650\u0627\u0647\u0652\u062A\u0650\u0645\u064E\u0627\u0645\u0650"
     skipDelayTime: 0
-    sentenceSound: {fileID: 0}
+    sentenceSound: {fileID: 8300000, guid: 228eb85fd34de9d4981446cff23939aa, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -34569,24 +34601,59 @@ MonoBehaviour:
         m_CallState: 2
   triggerState: 0
   sentences:
-  - dialogueCharacter: {fileID: 11400000, guid: 9016a1e35e20bb54aa95027a2b6896aa, type: 2}
+  - dialogueCharacter: {fileID: 11400000, guid: 58e74a680740e3845ab5d4135c05048a, type: 2}
     sentence: 
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: 4984f5838d721504e9819468690bcaea, type: 3}
+    sentenceSound: {fileID: 8300000, guid: f8cd8c7bf2fc7f04eb51720f2666e116, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
-  - dialogueCharacter: {fileID: 11400000, guid: 9016a1e35e20bb54aa95027a2b6896aa, type: 2}
+  - dialogueCharacter: {fileID: 11400000, guid: 0db1a2c3635986e42afb736918b89140, type: 2}
     sentence: 
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: 43de76c2fab8e034c88a1d3a6add658e, type: 3}
+    sentenceSound: {fileID: 8300000, guid: e2dc696173a122a4797caafaf7faedf3, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
-  - dialogueCharacter: {fileID: 11400000, guid: 9016a1e35e20bb54aa95027a2b6896aa, type: 2}
+  - dialogueCharacter: {fileID: 11400000, guid: 58e74a680740e3845ab5d4135c05048a, type: 2}
     sentence: 
     skipDelayTime: 0
-    sentenceSound: {fileID: 8300000, guid: a35e61ad2adb52e4a8b57cfb9fd973bb, type: 3}
+    sentenceSound: {fileID: 8300000, guid: 73ab58a1cf0d3734d8dc5cbc9294f551, type: 3}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueCharacter: {fileID: 11400000, guid: 0db1a2c3635986e42afb736918b89140, type: 2}
+    sentence: 
+    skipDelayTime: 0
+    sentenceSound: {fileID: 8300000, guid: ebd5094a0a6fb634a82df7f928d190a2, type: 3}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueCharacter: {fileID: 11400000, guid: 58e74a680740e3845ab5d4135c05048a, type: 2}
+    sentence: 
+    skipDelayTime: 0
+    sentenceSound: {fileID: 8300000, guid: 5d3b6bd0c6072c345a47377e05032b4a, type: 3}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueCharacter: {fileID: 11400000, guid: 58e74a680740e3845ab5d4135c05048a, type: 2}
+    sentence: 
+    skipDelayTime: 0
+    sentenceSound: {fileID: 8300000, guid: 4c9dfb30e9a11894d84c0919ee817a1a, type: 3}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueCharacter: {fileID: 11400000, guid: 58e74a680740e3845ab5d4135c05048a, type: 2}
+    sentence: 
+    skipDelayTime: 0
+    sentenceSound: {fileID: 8300000, guid: ec0c5f5420a83fe4a9b096417fcbf522, type: 3}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueCharacter: {fileID: 11400000, guid: 0db1a2c3635986e42afb736918b89140, type: 2}
+    sentence: 
+    skipDelayTime: 0
+    sentenceSound: {fileID: 8300000, guid: c3e16805c3973804ab9a360b01c469f0, type: 3}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -42108,6 +42175,191 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 212370497460711607, guid: e96ffa1cc9a1b00459c5a1934c3d4aa6, type: 3}
+--- !u!1 &1609509330
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1609509331}
+  - component: {fileID: 1609509334}
+  - component: {fileID: 1609509333}
+  - component: {fileID: 1609509332}
+  m_Layer: 0
+  m_Name: DialogueManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1609509331
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609509330}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.123981476, y: 0.4600007, z: -0.25301743}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 868230899}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1609509332
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609509330}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!65 &1609509333
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609509330}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1609509334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609509330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b89b2c8d34df52d4e89cba040401d38b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HeneGames.DialogueSystem.DialogueManager
+  audioSource: {fileID: 145989371}
+  startDialogueEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  nextSentenceDialogueEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  endDialogueEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerState: 0
+  sentences:
+  - dialogueCharacter: {fileID: 11400000, guid: 0db1a2c3635986e42afb736918b89140, type: 2}
+    sentence: "\u0644\u0650\u0645\u064E\u0627\u0630\u064E\u0627 \u062A\u064F\u0631\u0650\u0643\u064E\u062A\u0652
+      \u0647\u064E\u0630\u0650\u0647\u0650 \u0627\u0644\u0623\u064E\u062D\u0652\u0630\u0650\u064A\u064E\u0629\u064F
+      \u0647\u064F\u0646\u064E\u0627\u061F"
+    skipDelayTime: 0
+    sentenceSound: {fileID: 8300000, guid: bc58905be9dfde54eb15970c6a6847f0, type: 3}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &1611860448 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8009987137999418058, guid: a5787d33de26c394190de4dce592f521, type: 3}
